@@ -1,0 +1,74 @@
+package main
+
+import "testing"
+
+// 1 - Complete the firstItemOf method to return
+// the first element of the input array.
+func firstItemOf(array []int) int {
+	return 0
+}
+
+// 2 - Complete the findItemByIndex method to return
+// the array's element positioned at the given index.
+func findItemByIndex(array []int, index int) int {
+	return 0
+}
+
+// 3 - Complete the lengthOf method to return
+// the array's length.
+func lengthOf(array []int) int {
+	return 0
+}
+
+// 4 - Complete the lastItemOf method to return
+// the last element of the input array. (hint: use the len() method)
+func lastItemOf(array []int) int {
+	return 0
+}
+
+// ###################################################################
+// TEST
+
+type arrayTest struct {
+	array []int
+	first int
+	last  int
+}
+
+var arrayTests = []arrayTest{
+	{[]int{1, 2, 3}, 1, 3},
+	{[]int{3, 2, 1, 0}, 3, 0},
+	{[]int{2, 6, 1, 0, 3}, 2, 3},
+}
+
+func TestFirstItemOf(t *testing.T) {
+	for _, test := range arrayTests {
+		if i := firstItemOf(test.array); i != test.first {
+			t.Errorf("firstItemOf returned %d instead of %d", i, test.first)
+		}
+	}
+}
+
+func TestFindItemByIndex(t *testing.T) {
+	for _, test := range arrayTests {
+		if i := findItemByIndex(test.array, test.array[0]); i != test.array[test.array[0]] {
+			t.Errorf("firstItemOf returned %d instead of %d", i, test.array[test.array[0]])
+		}
+	}
+}
+
+func TestLengthOf(t *testing.T) {
+	for _, test := range arrayTests {
+		if i := lengthOf(test.array); i != len(test.array) {
+			t.Errorf("firstItemOf returned %d instead of %d", i, len(test.array))
+		}
+	}
+}
+
+func TestLastItemOf(t *testing.T) {
+	for _, test := range arrayTests {
+		if i := lastItemOf(test.array); i != test.last {
+			t.Errorf("firstItemOf returned %d instead of %d", i, test.last)
+		}
+	}
+}
