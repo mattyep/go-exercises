@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// 1 - Complete the following method with a classic for-loop so that
+// 1️⃣ - Complete the following method with a classic for-loop so that
 // the returned array contains the values 1 to 5 ([1 2 3 4 5])
 func arrayWith1to5() [5]int {
 	var array [5]int
@@ -13,7 +13,7 @@ func arrayWith1to5() [5]int {
 	return array
 }
 
-// 2 - Complete the following method with a for-loop of your choice so that
+// 2️⃣ - Complete the following method with a for-loop of your choice so that
 // the returned array contains the values 1 to n ([1 2 ... n])
 func arrayWith1toN(n int) []int {
 	var array []int = make([]int, n)
@@ -21,14 +21,14 @@ func arrayWith1toN(n int) []int {
 	return array
 }
 
-// 3 - Complete the following method with a for-loop of your choice so that
+// 3️⃣ - Complete the following method with a for-loop of your choice so that
 // the sum of the array is returned (e.g. [1 2 3] -> 6)
 func arraySum(array []int) int {
 	//...
 	return 0
 }
 
-// 4 - Complete the following method with a for-loop of your choice so that
+// 4️⃣ - Complete the following method with a for-loop of your choice so that
 // it squares all the values (value * value) and return them on an array of the same size (e.g. [1 2 3] -> [1 4 9])
 func arraySquare(array []int) []int {
 	var result []int

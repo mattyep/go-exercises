@@ -2,27 +2,31 @@ package main
 
 import "testing"
 
-// 1 - Complete the firstItemOf method to return
+// 1️⃣ - Complete the firstItemOf method to return
 // the first element of the input array.
 func firstItemOf(array []int) int {
+	//...
 	return 0
 }
 
-// 2 - Complete the findItemByIndex method to return
+// 2️⃣ - Complete the findItemByIndex method to return
 // the array's element positioned at the given index.
 func findItemByIndex(array []int, index int) int {
+	//...
 	return 0
 }
 
-// 3 - Complete the lengthOf method to return
+// 3️⃣ - Complete the lengthOf method to return
 // the array's length.
 func lengthOf(array []int) int {
+	//...
 	return 0
 }
 
-// 4 - Complete the lastItemOf method to return
+// 4️⃣ - Complete the lastItemOf method to return
 // the last element of the input array. (hint: use the len() method)
 func lastItemOf(array []int) int {
+	//...
 	return 0
 }
 
