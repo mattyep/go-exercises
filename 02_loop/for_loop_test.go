@@ -20,6 +20,22 @@ func arrayWith1toN(n int) []int {
 	return array
 }
 
+// 3 - Complete the following method with a for-loop of your choice so that
+// the sum of the array is returned (e.g. [1 2 3] -> 6)
+func arraySum(array []int) int {
+	return 0
+}
+
+// 4 - Complete the following method with a for-loop of your choice so that
+// all the values are shifted to the left and the first goes at the end. (e.g. [1 2 3 4] -> [2 3 4 1])
+// see : https://www.javatpoint.com/program-to-left-rotate-the-elements-of-an-array
+// The goal is to play with for-loop and index + 1. Using 'append(array[1:], array[0])' here is cheating :).
+func arrayRotateLeft(array []int) []int {
+	var result []int = make([]int, len(array))
+	// ...
+	return result
+}
+
 // ###################################################################
 // TEST
 
@@ -34,5 +50,20 @@ func TestArrayWith1toN(t *testing.T) {
 	expected := []int{1, 2, 3, 4, 5}
 	if arr := arrayWith1toN(5); !reflect.DeepEqual(arr, expected) {
 		t.Errorf("arrayWith1toN returned %v instead of %v", arr, expected)
+	}
+}
+
+func TestSumArray(t *testing.T) {
+	testSum := []int{1, 2, 3}
+	if sum := arraySum(testSum); sum != 6 {
+		t.Errorf("sumArray returned %v instead of %v", sum, 6)
+	}
+}
+
+func TestArrayRotateLeft(t *testing.T) {
+	input := []int{1, 2, 3, 4}
+	expected := []int{2, 3, 4, 1}
+	if arr := arrayRotateLeft(input); !reflect.DeepEqual(arr, expected) {
+		t.Errorf("arrayRotateLeft returned %v instead of %v", arr, expected)
 	}
 }
