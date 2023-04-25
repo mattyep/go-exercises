@@ -7,7 +7,8 @@ import (
 
 // 1 - Complete the following method with a classic for-loop so that
 // the array returned contains the values 1 to 5 ([1 2 3 4 5])
-func arrayWith1to5() (array [5]int) {
+func arrayWith1to5() [5]int {
+	var array [5]int
 	// ...
 	return array
 }
