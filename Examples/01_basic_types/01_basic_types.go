@@ -35,4 +35,9 @@ func main() {
 	i, j := 1, "toto"
 
 	fmt.Println(foo, float, x, y, i, j)
+
+	// You can also cast a value into a different type (when possible)
+	var myInt int = 10
+	var myFloat float64 = float64(myInt)
+	fmt.Println(myFloat)
 }
