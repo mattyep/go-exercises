@@ -1,33 +1,37 @@
 package main
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 // 1️⃣ - Complete the firstItemOf method to return
 // the first element of the input array.
 func firstItemOf(array []int) int {
-	//...
-	return 0
+	//fmt.Println(array[0])
+	return array[0]
 }
 
 // 2️⃣ - Complete the findItemByIndex method to return
 // the array's element positioned at the given index.
 func findItemByIndex(array []int, index int) int {
-	//...
-	return 0
+	// array []int & index are values
+	// tout ce quon met entre [] sera un index
+	return array[index]
 }
 
 // 3️⃣ - Complete the lengthOf method to return
 // the array's length.
 func lengthOf(array []int) int {
-	//...
-	return 0
+	//fmt.Println("la taille de mon tableau1 :", [len(array)])
+	return len(array)
 }
 
 // 4️⃣ - Complete the lastItemOf method to return
 // the last element of the input array. (hint: use the len() method)
 func lastItemOf(array []int) int {
-	//...
-	return 0
+	fmt.Println("Dernier item =", array[len(array)-1])
+	return array[len(array)-1]
 }
 
 // ###################################################################
