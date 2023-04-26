@@ -38,12 +38,12 @@ func main() {
 	// ✅ Use the 'var' syntax when you want a specific type which is not the default one.
 
 	// ########################################################################
-	// 5️⃣ - Use the fooBar() method below and assign its result into two variable 'foo' and 'bar'
+	// 5️⃣ - Call the fooBar() method and assign its result into two variable varA and varB
 	// (see https://go.dev/doc/effective_go#redeclaration)
 
 	//...
 
-	// 6️⃣ - Now, replace the var 'foo' with an underscore _ .
+	// 6️⃣ - Now, replace the var 'varA' with an underscore _ .
 	// This way, you explicitly say you're not interested by one of the values of fooBar and you are not forced to use it.
 
 	//...

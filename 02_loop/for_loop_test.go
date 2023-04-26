@@ -36,7 +36,7 @@ func arraySquare(array []int) []int {
 	return result
 }
 
-// 5 - Complete the following method with a for-loop of your choice so that
+// 5️⃣ - Complete the following method with a for-loop of your choice so that
 // all the values are shifted to the left and the first goes at the end. (e.g. [1 2 3 4] -> [2 3 4 1])
 // see : https://www.javatpoint.com/program-to-left-rotate-the-elements-of-an-array
 // The goal is to play with for-loop and index + 1. Using 'append(array[1:], array[0])' here is cheating :).
