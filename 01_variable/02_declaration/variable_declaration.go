@@ -39,12 +39,14 @@ func main() {
 
 	fooBar()
 
-	_, minnie := fooBar()
-
+	mickey, minnie := fooBar()
+	fmt.Println(mickey, minnie)
 	// 6️⃣ - Now, replace the var 'varA' with an underscore _ .
 	// This way, you explicitly say you're not interested by one of the values of fooBar and you are not forced to use it.
 
-	//...
+	_, minnie = fooBar()
+	fmt.Println(minnie)
+
 }
 
 func fooBar() (string, string) {
