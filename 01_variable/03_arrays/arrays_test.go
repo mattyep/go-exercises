@@ -30,6 +30,14 @@ func lastItemOf(array []int) int {
 	return 0
 }
 
+// 5️⃣ - Exact same exercise as number 2️⃣. Except now the index might be out of bound
+// and generate a Panic. Complete the safeFindItemByIndex method to return
+// the array's element positioned at the given index OR 0 if the given index is out of bound
+func safeFindItemByIndex(array []int, index int) int {
+	//...
+	return 0
+}
+
 // ###################################################################
 // TEST
 
@@ -74,5 +82,23 @@ func TestLastItemOf(t *testing.T) {
 		if i := lastItemOf(test.array); i != test.last {
 			t.Errorf("firstItemOf returned %d instead of %d", i, test.last)
 		}
+	}
+}
+
+func TestSafeFindItemByIndex(t *testing.T) {
+	for _, test := range arrayTests {
+		if i := safeFindItemByIndex(test.array, test.array[0]); i != test.array[test.array[0]] {
+			t.Errorf("firstItemOf returned %d instead of %d", i, test.array[test.array[0]])
+		}
+		func() {
+			defer func() {
+				if r := recover(); r != nil {
+					t.Errorf("safeFindItemByIndex raised a panic : %v", r)
+				}
+			}()
+			if i := safeFindItemByIndex(test.array, len(test.array)); i != 0 {
+				t.Errorf("safeFindItemByIndex called with out of bound index %v returned %d instead of %d", len(test.array), i, test.array[test.array[0]])
+			}
+		}()
 	}
 }

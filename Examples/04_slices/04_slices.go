@@ -46,7 +46,19 @@ func main() {
 	fmt.Printf("👉🏼 You can use any means you want to compute the index you want :  \n", value)
 
 	//-----------------------------------------------------------------------------------
-	// ➡️ Use append() to add element in your array
+	// ⚠️ Be careful with index manipulation, they should stay within the array/slice actual size.
+	outOfBoundIndex := 5 //myArray's last index is 4, 5 doesn't exist.
+	func() int {
+		defer func() { fmt.Println("😱 PANIC : ", recover()) }()
+		return myArray[outOfBoundIndex] //panic: runtime error: index out of range [5] with length 5
+	}()
+	//Here's the way to stay safe :
+	if outOfBoundIndex < len(myArray) {
+		//👍 Keep calm and check array's boundaries
+	}
+
+	//-----------------------------------------------------------------------------------
+	// ➡️ For Slices only, use append() to add a new element dynamically
 	sliceOfString = append(sliceOfString, "foo")
 	sliceOfString = append(sliceOfString, "bar")
 
