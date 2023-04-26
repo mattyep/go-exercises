@@ -37,7 +37,6 @@ func main() {
 	// 5️⃣ - Call the fooBar() method and assign its result into two variable varA and varB
 	// (see https://go.dev/doc/effective_go#redeclaration)
 
-	//...
 	fooBar()
 
 	_, minnie := fooBar()
