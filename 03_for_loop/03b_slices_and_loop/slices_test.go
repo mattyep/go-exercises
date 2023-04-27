@@ -48,6 +48,14 @@ func copySlice(slice []int) []int {
 	return nil
 }
 
+// 5️⃣ - Complete the following method to iterate on the given slice and
+// return the first odd number (e.g. 1 3 5 ...) you find in it.
+// Hint : An odd number can be tested with '(value % 2) != 0'
+func findOddNumberInSlice(slice []int) int {
+	//...
+	return 0
+}
+
 // ###################################################################
 // TEST
 
@@ -76,5 +84,12 @@ func TestCopySlice(t *testing.T) {
 	}
 	if copy := copySlice(original); &original[0] == &copy[0] {
 		t.Errorf("copySlice() should have returned a copy of %v but returned the same slice instead", original)
+	}
+}
+
+func TestFindOddNumberInSlice(t *testing.T) {
+	testArray := []int{0, 2, 4, 5}
+	if r := findOddNumberInSlice(testArray); r != 5 {
+		t.Errorf("findOddNumberInSlice() returned %v instead of 5 from %v", r, testArray)
 	}
 }
