@@ -13,11 +13,13 @@ func main() {
 	// 1️⃣ - define a variable (a) of type int without any value
 	// 1 - define a variable (a) of type int without any value
 	var a int
+	fmt.Println(a)
 	// display your variable with fmt.Printf("a: %T(%v) \n", a, a)
 
 	// ########################################################################
 	// 2 - define a variable (b) with a value 10 (preferably with the := syntax)
 	b := 10
+	fmt.Println(b)
 	// You didn't have to declare the type because the compiler infered it from the value (Integer).
 	// ✅ Use the 'var' syntax when you don't have any value to assign yet and the zero-value is good enough (e.g int -> 0)
 	// ✅ Use the ':=' syntax when you declare a new variable directly with a value (e.g. 10) which is not the default zero-value

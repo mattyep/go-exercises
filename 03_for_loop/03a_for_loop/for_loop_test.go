@@ -1,24 +1,34 @@
 package main
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 )
 
 // 1️⃣ - Complete the following method with a classic for-loop so that
 // the returned array contains the values 1 to 5 ([1 2 3 4 5])
+
 func arrayWith1to5() [5]int {
-	var array [5]int
-	// ...
+	var array = [5]int{1, 2, 3, 4, 5}
+
+	for _, j := range array {
+		fmt.Println(j)
+	}
 	return array
 }
 
 // 2️⃣ - Complete the following method with a for-loop of your choice so that
 // the returned array contains the values 1 to n ([1 2 ... n])
 func arrayWith1toN(n int) []int {
+
 	var array []int = make([]int, n)
-	// ...
+
+	for i := 0; i < len(array); i++ {
+		fmt.Println(array[i])
+	}
 	return array
+
 }
 
 // 3️⃣ - Complete the following method with a for-loop of your choice so that
