@@ -11,6 +11,7 @@ func firstItemOf(array []int) int {
 
 // 2️⃣ - Complete the findItemByIndex method to return
 // the array's element positioned at the given index.
+// hint: Same as above 1️⃣, except that it's not 0 but the 'index' param.
 func findItemByIndex(array []int, index int) int {
 	//...
 	return 0
@@ -33,6 +34,8 @@ func lastItemOf(array []int) int {
 // 5️⃣ - Exact same exercise as number 2️⃣. Except now the index might be out of bound
 // and generate a Panic. Complete the safeFindItemByIndex method to return
 // the array's element positioned at the given index OR 0 if the given index is out of bound
+// Hint: You will have first to compare the given index param against the length of the array
+// in order to make sure that the index does exist.
 func safeFindItemByIndex(array []int, index int) int {
 	//...
 	return 0

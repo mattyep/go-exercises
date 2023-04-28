@@ -7,29 +7,43 @@ import (
 
 // 1️⃣ - Complete the following method with a classic for-loop so that
 // the returned array contains the values 1 to 5 ([1 2 3 4 5])
+// hint 1 : 'var array [5]int' defines a fixed size array which results into [0, 0, 0, 0, 0]
+// You can already iterate on it to modify it's values
+// hint 2 : The index variable you get from the for-loop can help you BOTH modify the value at the given index AND
+// also generate the expected values (1 to 5) since they are just shifted by one from the index
 func arrayWith1to5() [5]int {
 	var array [5]int
 	// ...
 	return array
 }
 
-// 2️⃣ - Complete the following method with a for-loop of your choice so that
-// the returned array contains the values 1 to n ([1 2 ... n])
+// 2️⃣ - Complete the following method with a for-RANGE loop over 'array' in order to
+// fill it with values going from 1 to ... n (ex: [1, 2, 3, 4, 5, ...., n])
+// hint 1: make() prefills the array with (n) zero-values. Therefore the 'array' variable has already the expected size.
+// hint 2: You will have to use the index given by the for-loop to BOTH modify the array's values AND
+// generate the values 1 .. n which are just shifted by one compared to the index values.
 func arrayWith1toN(n int) []int {
 	var array []int = make([]int, n)
 	// ...
 	return array
 }
 
-// 3️⃣ - Complete the following method with a for-loop of your choice so that
-// the sum of the array is returned (e.g. [1 2 3] -> 6)
+// 3️⃣ - Complete the following method with a for-loop to do the sum of all
+// the values contained in the param 'array', then return this sum.
+// The array can have different sizes.
+// ex A: array: [1, 2, 3] -> return 6
+// ex B: array: [2, 2, 2, 2, 2] - > return 10
+// Hint: You will need a 'sum' variable outside the loop where you can 'accumulate' each of the values
+// you treat on the loop
 func arraySum(array []int) int {
 	//...
 	return 0
 }
 
 // 4️⃣ - Complete the following method with a for-loop of your choice so that
-// it squares all the values (value * value) and return them on an array of the same size (e.g. [1 2 3] -> [1 4 9])
+// it squares all the values (value * value) and return them on an array of the same size.
+// ex A: array: [1, 2, 3] -> return [1, 4, 9]
+// ex B: array: [2, 2, 2, 2, 2] - > return [4, 4, 4, 4, 4]
 func arraySquare(array []int) []int {
 	var result []int
 	//...
