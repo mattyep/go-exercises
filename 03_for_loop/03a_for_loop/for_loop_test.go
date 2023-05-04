@@ -74,13 +74,20 @@ func arraySum(array []int) int {
 // 4️⃣ - Complete the following method with a for-loop of your choice so that
 // it squares all the values (value * value) and return them on an array of the same size (e.g. [1 2 3] -> [1 4 9])
 func arraySquare(array []int) []int {
-	var result = []int{1, 2, 3}
 
-	for index, valeur := range array {
+	// result[0] = result[0] * result[0]
+	// result[1] = result[1] * result[1]
+	// result[2] = result[2] * result[2]
+	// fmt.Println(result)
 
-		fmt.Println(result)
+	for index := range array {
+
+		array[index] = array[index] * array[index]
+		fmt.Println(array[index])
+
 	}
-	// return result
+
+	return array
 }
 
 // 5️⃣ - Complete the following method with a for-loop of your choice so that
@@ -118,8 +125,8 @@ func TestSumArray(t *testing.T) {
 }
 
 func TestArraySquare(t *testing.T) {
-	input := []int{1, 2, 3}
-	expected := []int{1, 4, 9}
+	input := []int{1, 2, 3, 4}
+	expected := []int{1, 4, 9, 16}
 	if arr := arraySquare(input); !reflect.DeepEqual(arr, expected) {
 		t.Errorf("arraySquare returned %v instead of %v", arr, expected)
 	}

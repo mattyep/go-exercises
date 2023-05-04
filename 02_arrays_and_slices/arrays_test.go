@@ -39,7 +39,7 @@ func lastItemOf(array []int) int {
 // the array's element positioned at the given index OR 0 if the given index is out of bound
 func safeFindItemByIndex(array []int, index int) int {
 	//...
-	return 0
+	return array[0]
 }
 
 // ###################################################################
