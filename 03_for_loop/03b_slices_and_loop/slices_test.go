@@ -20,8 +20,8 @@ import (
 // hint: the append() method returns a new slice with the extra value.
 // e.g. addElementTo([]int{}) -> [1]
 func addElementTo(slice []int) []int {
-	//...
-	return nil
+	slice2 := append(slice, 1)
+	return slice2
 }
 
 // 2️⃣ - Complete the addMultipleElementTo method to return
@@ -29,31 +29,40 @@ func addElementTo(slice []int) []int {
 // The value itself doesn't matter.
 // e.g. addMultipleElementTo([]int{}, 5) -> [1 1 1 1 1]
 func addMultipleElementTo(slice []int, nbElement int) []int {
-	//...
-	return nil
+	slice2 := make([]int, 0)
+	for i := 0; i < nbElement; i++ {
+		slice2 = append(slice2, 1)
+	}
+	return slice2
 }
 
 // 3️⃣ - Complete the makeSlice method to return
 // a new slice provisioned with (size) elements. Use the make() method to do it.
 // e.g. makeSlice(5) -> [0 0 0 0 0]
 func makeSlice(size int) []int {
-	//...
-	return nil
+	slices2 := make([]int, size)
+	return slices2
 }
 
 // 4️⃣ - Complete the copySlice method to return
 // a copy of the slice. You will have to use the make() and copy() method. Google it :)
 func copySlice(slice []int) []int {
-	//...
-	return nil
+	slice2 := make([]int, len(slice))
+	copy(slice2, slice)
+	return slice2
 }
 
 // 5️⃣ - Complete the following method to iterate on the given slice and
 // return the first odd number (e.g. 1 3 5 ...) you find in it.
 // Hint : An odd number can be tested with '(value % 2) != 0'
 func findOddNumberInSlice(slice []int) int {
-	//...
-	return 0
+	slice2 := make([]int, 0)
+	for _, value := range slice {
+		if value%2 != 0 {
+			slice2 = append(slice2, value)
+		}
+	}
+	return slice2[0]
 }
 
 // ###################################################################
