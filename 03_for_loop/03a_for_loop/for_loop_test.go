@@ -13,7 +13,9 @@ import (
 // also generate the expected values (1 to 5) since they are just shifted by one from the index
 func arrayWith1to5() [5]int {
 	var array [5]int
-	// ...
+	for i := 0; i < 5; i++ {
+		array[i] = i + 1
+	}
 	return array
 }
 
@@ -24,7 +26,9 @@ func arrayWith1to5() [5]int {
 // generate the values 1 .. n which are just shifted by one compared to the index values.
 func arrayWith1toN(n int) []int {
 	var array []int = make([]int, n)
-	// ...
+	for i := range array {
+		array[i] = i + 1
+	}
 	return array
 }
 
@@ -36,8 +40,11 @@ func arrayWith1toN(n int) []int {
 // Hint: You will need a 'sum' variable outside the loop where you can 'accumulate' each of the values
 // you treat on the loop
 func arraySum(array []int) int {
-	//...
-	return 0
+	sum := 0
+	for i := 0; i < len(array); i++ {
+		sum += array[i]
+	}
+	return sum
 }
 
 // 4️⃣ - Complete the following method with a for-loop of your choice so that
@@ -45,8 +52,10 @@ func arraySum(array []int) int {
 // ex A: array: [1, 2, 3] -> return [1, 4, 9]
 // ex B: array: [2, 2, 2, 2, 2] - > return [4, 4, 4, 4, 4]
 func arraySquare(array []int) []int {
-	var result []int
-	//...
+	var result []int = make([]int, len(array))
+	for i, value := range array {
+		result[i] = value * value
+	}
 	return result
 }
 
@@ -56,7 +65,13 @@ func arraySquare(array []int) []int {
 // The goal is to play with for-loop and index + 1. Using 'append(array[1:], array[0])' here is cheating :).
 func arrayRotateLeft(array []int) []int {
 	var result []int = make([]int, len(array))
-	// ...
+	first := array[0]
+
+	for i := 0; i < len(array)-1; i++ {
+		result[i] = array[i+1]
+	}
+
+	result[len(array)-1] = first
 	return result
 }
 
