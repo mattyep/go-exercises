@@ -5,30 +5,26 @@ import "testing"
 // 1️⃣ - Complete the firstItemOf method to return
 // the first element of the input array.
 func firstItemOf(array []int) int {
-	//...
-	return 0
+	return array[0]
 }
 
 // 2️⃣ - Complete the findItemByIndex method to return
 // the array's element positioned at the given index.
 // hint: Same as above 1️⃣, except that it's not 0 but the 'index' param.
 func findItemByIndex(array []int, index int) int {
-	//...
-	return 0
+	return array[index]
 }
 
 // 3️⃣ - Complete the lengthOf method to return
 // the array's length.
 func lengthOf(array []int) int {
-	//...
-	return 0
+	return len(array)
 }
 
 // 4️⃣ - Complete the lastItemOf method to return
 // the last element of the input array. (hint: use the len() method)
 func lastItemOf(array []int) int {
-	//...
-	return 0
+	return array[len(array)-1]
 }
 
 // 5️⃣ - Exact same exercise as number 2️⃣. Except now the index might be out of bound
@@ -37,8 +33,10 @@ func lastItemOf(array []int) int {
 // Hint: You will have first to compare the given index param against the length of the array
 // in order to make sure that the index does exist.
 func safeFindItemByIndex(array []int, index int) int {
-	//...
-	return 0
+	if index < 0 || index >= len(array) {
+		return 0
+	}
+	return array[index]
 }
 
 // ###################################################################
